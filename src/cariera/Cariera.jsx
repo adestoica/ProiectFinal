@@ -28,6 +28,12 @@ export const Cariera = () => {
     try {
       await axios.post(`http://localhost:3000/jobs`, jobs);
       alert("Datele au fost trimise cu succes!");
+      setJob("");
+      setNume("");
+      setEmail("");
+      setNumarTelefon("");
+      setStudii("");
+      setExperienta("");
     } catch (error) {
       console.error("Eroare", error);
       alert("A intervenit o problema!");

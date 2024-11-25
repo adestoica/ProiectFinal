@@ -191,7 +191,7 @@ const HotelReservationForm = () => {
             <button
               type="submit"
               className={classNames("font-bold p-4 rounded", {
-                "bg-green-900 hover:bg-green-300 text-black": !editId,
+                "bg-green-500 hover:bg-green-300 text-black": !editId,
                 "bg-red-600 hover:bg-red-400 text-white": editId,
               })}
             >
@@ -203,7 +203,7 @@ const HotelReservationForm = () => {
           <h2 className="text-2xl font-semibold p-3 text-center">
             REZERVARILE TALE
           </h2>
-          <div className="bg-gray-700 text-xl lg:text-2xl w-3/6 m-auto flex justify-center gap-8 rounded-lg p-5 my-10 ">
+          <div className="bg-gray-500 text-xl lg:text-2xl w-3/6 m-auto flex justify-center gap-8 rounded-lg p-5 my-10 ">
             {reservations.map((reservation) => (
               <div
                 key={reservation.id}
