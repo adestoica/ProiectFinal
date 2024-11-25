@@ -19,7 +19,7 @@ export default function DarkModeToggle() {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="size-14"
+        className=" size-4 md:size-12"
       >
         <path
           strokeLinecap="round"

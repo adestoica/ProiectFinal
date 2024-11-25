@@ -5,10 +5,6 @@ import CameraCard from "./cameraCard";
 import DarkModeToggle from "../layout/DarkModeToggle";
 import { Footer } from "../components/Footer";
 
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-
 export const Hotel = () => {
   const navigate = useNavigate();
   const handleRooms = () => {

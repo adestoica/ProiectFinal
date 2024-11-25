@@ -33,7 +33,7 @@ const HotelReservationForm = () => {
           `http://localhost:3000/reservations/${editId}`,
           reservationData
         );
-        alert("Reservarea a fost editata cu succes!");
+        alert("Ai editat!");
         setEditId(null); //Reseteaza id-ul dupa modificare
       } else {
         await axios.post("http://localhost:3000/reservations", reservationData);
@@ -57,7 +57,7 @@ const HotelReservationForm = () => {
   const deleteReservation = async (id) => {
     try {
       await axios.delete(`http://localhost:3000/reservations/${id}`);
-      alert("Rezervarea a fost stearsa!");
+      alert("Rezervarea va fii stearsa!");
       fetchReservations(); //Actualizeaza lista
     } catch (error) {
       console.error("Eroare la stergerea rezervarii.", error);
@@ -82,7 +82,7 @@ const HotelReservationForm = () => {
 
   return (
     <div className=" p-4 dark:bg-black h-sc">
-      <div className="p-4 mt-32 bg-gray-400  w-11/12 text-black m-auto  rounded-lg shadow-md">
+      <div className="p-4 mt-32 bg-gray-300  w-11/12 text-black m-auto  rounded-lg shadow-md">
         <h2 className="text-2xl font-serif font-bold text-center p-6">
           REZERVA O CAMERA
         </h2>
@@ -191,7 +191,7 @@ const HotelReservationForm = () => {
             <button
               type="submit"
               className={classNames("font-bold p-4 rounded", {
-                "bg-green-500 hover:bg-green-300 text-black": !editId,
+                "bg-green-500 hover:bg-green-700 text-black": !editId,
                 "bg-red-600 hover:bg-red-400 text-white": editId,
               })}
             >
@@ -203,7 +203,7 @@ const HotelReservationForm = () => {
           <h2 className="text-2xl font-semibold p-3 text-center">
             REZERVARILE TALE
           </h2>
-          <div className="bg-gray-500 text-xl lg:text-2xl w-3/6 m-auto flex justify-center gap-8 rounded-lg p-5 my-10 ">
+          <div className="bg-gray-400 text-xl lg:text-2xl w-3/6 m-auto flex justify-center gap-8 rounded-lg p-5 my-10 ">
             {reservations.map((reservation) => (
               <div
                 key={reservation.id}
